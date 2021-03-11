@@ -1,0 +1,10 @@
+node_modules
+build
+*.log
+
+# WEBSTORM
+.idea
+.cache
+
+# VSC
+.history/
