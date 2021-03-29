@@ -26,9 +26,6 @@ function isAlphaNumeric(str) {
   return true;
 }
 
-validatePass('pass');
-validatePass('TcSf12y');
-
 function validatePass(value) {
   if (isAlphaNumeric(value) === true) {
     if (value.length <= 20 && value.length >= 6) {
@@ -40,3 +37,5 @@ function validatePass(value) {
     console.log('NOT VALID');
   }
 }
+validatePass('pass');
+validatePass('TcSf12y');
