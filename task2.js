@@ -1,17 +1,6 @@
-'use strict';
-
-// checkNumber
-checkNumber(7);
-checkNumber(-10);
+"use strict";
 
 function checkNumber(value) {
-  const arr = [
-    isPrime(value),
-    isEven(value),
-    isMultiple(value)
-  ];
-  console.log(arr);
-
   function isPrime(n) {
     if (n > 1 && n % n === 0 && n % 1 === 0) {
       return true;
@@ -32,4 +21,10 @@ function checkNumber(value) {
     }
     return false;
   }
+
+  const arr = [isPrime(value), isEven(value), isMultiple(value)];
+  console.log(arr);
 }
+
+checkNumber(7);
+checkNumber(-10);
