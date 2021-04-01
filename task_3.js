@@ -3,7 +3,6 @@
 function tickets(person) {
   const cashbox = [];
   const ticketCost = 25;
-  let result = '';
 
   for (let i = 0; i < person.length; i++) {
     if (person[i] === ticketCost) {
@@ -17,7 +16,7 @@ function tickets(person) {
         cashbox.shift();
         cashbox.push(person[i]);
       } else {
-        result = 'NO';
+        return 'NO. Vasya will not have enough money to give change.';
       }
     }
     if (
@@ -25,14 +24,12 @@ function tickets(person) {
       person.length > 0 &&
       cashbox[cashbox.length - 1] === person[person.length - 1]
     ) {
-      result = 'YES';
+      return 'YES';
     }
   }
-
-  return console.log(result);
 }
 
-tickets([25, 25, 50, 25]);
-tickets([25, 100]);
-tickets([25, 25, 50, 100]);
-tickets([25, 50, 100]);
+console.log(tickets([25, 25, 50, 25]));
+console.log(tickets([25, 100]));
+console.log(tickets([25, 25, 50, 100]));
+console.log(tickets([25, 50, 100]));
